@@ -62,9 +62,30 @@ export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
 export HADOOP_COMMON_HOME=$HADOOP_INSTALL
 export HADOOP_HDFS_HOME=$HADOOP_INSTALL
 export YARN_HOME=$HADOOP_INSTALL
-
 ```
 `source .bashrc`
+
+設定Hadoop config
+
+`cd hadoop/etc/hadoop`
+
+`vim hadoop-env.sh`，修改內容下
+
+`export JAVA_HOME=/usr/lib/jvm/jdk`
+
+修改core-sit.xml，`vim core-site.xml`，新增在`<configuration></configuration>`內
+
+```
+<property>
+   <name>fs.default.name</name>
+   <value>hdfs://master:9000</value>
+</property>
+```
+
+
+
+
+
 
 
 
