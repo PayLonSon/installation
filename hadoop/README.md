@@ -94,6 +94,14 @@ export YARN_HOME=$HADOOP_INSTALL
    <value>master</value>
 </property>
 <property>
+  <name>yarn.resourcemanager.address</name>
+  <value>master:8032</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.resource-tracker.address</name>
+  <value>master:8031</value>
+</property>
+<property>
    <name>yarn.resourcemanager.scheduler.address</name>
   <value>master:8030</value>
 </property>
@@ -105,7 +113,6 @@ export YARN_HOME=$HADOOP_INSTALL
   <name>yarn.nodemanager.address</name>
   <value>0.0.0.0:8034</value>
 </property>
-
 <property>
 <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
 <value>org.apache.hadoop.mapred.ShuffleHandler</value>
