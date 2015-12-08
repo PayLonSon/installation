@@ -38,8 +38,8 @@ cd ~
 ```
 ssh-keygen -t rsa -f ~/.ssh/id_rsa -P ""
 cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
-scp –r ~/.ssh node01:~/
-scp -r ~/.ssh node02:~/
+scp –r ~/.ssh node1:~/
+scp -r ~/.ssh node2:~/
 ```
 下載Hadoop
 
@@ -95,8 +95,64 @@ export YARN_HOME=$HADOOP_INSTALL
 </property>
 ```
 
+`cp mapred-site.xml.template mapred-site.xml`
+`vim mapred-site.xml`
+```
+<property>
+   <name>mapreduce.framework.name</name>
+   <value>yarn</value>
+</property>
+```
 
+新增兩個資料夾
 
+```
+mkdir -p ~/mydata/hdfs/namenode
+mkdir -p ~/mydata/hdfs/datanode
+```
+
+修改hdfs-site.xml，`vim hdfs-site.xml`
+
+```
+<property>
+   <name>dfs.replication</name>
+   <value>2</value>
+ </property>
+ <property>
+   <name>dfs.namenode.name.dir</name>
+   <value>/home/hduser/mydata/hdfs/namenode</value>
+ </property>
+ <property>
+   <name>dfs.datanode.data.dir</name>
+   <value>/home/hduser/mydata/hdfs/datanode</value>
+ </property>
+```
+
+修改`slaves`，`vim slaves`
+
+```
+node1
+node2
+```
+
+將Hadoop資料夾複製給其他node
+
+```
+scp -r /home/hduser/hadoop node1:/home/hduser/
+scp -r /home/hduser/hadoop node2:/home/hduser/
+
+```
+
+格式化HDFS
+
+```
+cd ~/hadoop
+bin/hdfs namenode -format
+```
+
+啟動Hadoop，`sbin/start-all.sh`
+
+使用`jps`查看java運行程式
 
 
 
