@@ -11,18 +11,24 @@
  ```
 修改/etc/hostname
 
-`sudo vim /etc/hostname`
-`sudo service hostname start`
+```
+sudo vim /etc/hostname
+sudo service hostname start
+```
 
  安裝Java JDK
  
- `sudo apt-get -y openjdk-7-jdk`
- `sudo ln -s /usr/lib/jvm/java-7-openjdk-amd64 /usr/lib/jvm/jdk`
+ ```
+ sudo apt-get -y openjdk-7-jdk
+ sudo ln -s /usr/lib/jvm/java-7-openjdk-amd64 /usr/lib/jvm/jdk
+ ```
 
 新增Hadoop使用者
 
-`sudo addgroup hadoop`
-`sudo adduser --ingroup hadoop hduser`
-`sudo adduser hduser sudo`
-`su hduser`
-`cd ~`
+```
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hduser
+sudo adduser hduser sudo
+su hduser
+cd ~
+```
