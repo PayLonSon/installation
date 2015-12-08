@@ -93,6 +93,24 @@ export YARN_HOME=$HADOOP_INSTALL
    <name>yarn.resourcemanager.hostname</name>
    <value>master</value>
 </property>
+<property>
+   <name>yarn.resourcemanager.scheduler.address</name>
+  <value>master:8030</value>
+</property>
+<property>
+  <name>yarn.resourcemanager.scheduler.class</name>
+  <value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.capacity.CapacityScheduler</value>
+</property>
+<property>
+  <name>yarn.nodemanager.address</name>
+  <value>0.0.0.0:8034</value>
+</property>
+
+<property>
+<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+
 ```
 
 `cp mapred-site.xml.template mapred-site.xml`
@@ -126,6 +144,15 @@ mkdir -p ~/mydata/hdfs/datanode
    <name>dfs.datanode.data.dir</name>
    <value>/home/hduser/mydata/hdfs/datanode</value>
  </property>
+<property>
+    <name>dfs.webhdfs.enabled</name>
+    <value>true</value>
+</property>
+<property>
+  <name>dfs.permissions</name>
+  <value>false</value>
+</property>
+
 ```
 
 修改`slaves`，`vim slaves`
