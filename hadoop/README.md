@@ -82,7 +82,18 @@ export YARN_HOME=$HADOOP_INSTALL
 </property>
 ```
 
+修改yarn-site.xml，`vim yarn-site.xml`
 
+```
+<property>
+   <name>yarn.nodemanager.aux-services</name>
+   <value>mapreduce_shuffle</value>
+</property>
+<property>
+   <name>yarn.resourcemanager.hostname</name>
+   <value>master</value>
+</property>
+```
 
 
 
