@@ -35,7 +35,7 @@ mv spark-1.4.1-bin-hadoop2.6 spark
 cd spark/conf
 ```
 
-修改`spark-env.sh內容，麻煩注意所有參數的路徑與自己的配置是否相同
+修改`spark-env.sh`內容，麻煩注意所有參數的路徑與自己的配置是否相同
 
 `cp spark-env.sh.template spark-env.sh`
 
