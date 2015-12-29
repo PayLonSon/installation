@@ -53,19 +53,20 @@ hadoop fs -chnow 777 /user/hive/warehouse
 ```
 #建立一個hive的database
 
-create database hive;
+mysql > create database hive; 
 
 #建立一個MySQL使用者，帳號跟密碼都是hive，且用%代表在任何hostname都可登入
 
-grant all on *.* to'hive'@'%' identified by 'hive';  
+mysql> grant all on *.* to'hive'@'%' identified by 'hive';    
 
 #更新User清單
 
-flush privileges; 
+mysql> flush privileges; 
 
 #結束mysql
 
-exit;
+mysql> exit; #結束mysql
+
 ```
 
 
