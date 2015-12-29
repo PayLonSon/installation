@@ -82,7 +82,7 @@ export YARN_HOME=$HADOOP_INSTALL
 </property>
 ```
 
-修改yarn-site.xml，`vim yarn-site.xml`
+修改yarn-site.xml，`vim yarn-site.xml`，新增在`<configuration></configuration>`內
 
 ```
 <property>
@@ -122,6 +122,9 @@ export YARN_HOME=$HADOOP_INSTALL
 
 `cp mapred-site.xml.template mapred-site.xml`
 `vim mapred-site.xml`
+
+新增在`<configuration></configuration>`內
+
 ```
 <property>
    <name>mapreduce.framework.name</name>
@@ -136,7 +139,7 @@ mkdir -p ~/mydata/hdfs/namenode
 mkdir -p ~/mydata/hdfs/datanode
 ```
 
-修改hdfs-site.xml，`vim hdfs-site.xml`
+修改hdfs-site.xml，`vim hdfs-site.xml`，新增在`<configuration></configuration>`內
 
 ```
 <property>
