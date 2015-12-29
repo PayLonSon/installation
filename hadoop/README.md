@@ -9,7 +9,7 @@
  node01	192.168.56.129
  node02	192.168.56.130
  ```
-修改/etc/hostname
+修改/etc/hostname (以下所有master, node1, node2請依照自己給機器的name設定，假設你的master叫做Hadoop-master，那以下所有master，皆要改成Hadoop-master，node同理)
 
 ```
 sudo vim /etc/hostname
