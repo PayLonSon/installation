@@ -191,9 +191,11 @@ bin/hdfs namenode -format
 
 使用`jps`查看java運行程式
 
-
-
-
+執行範例程式
+```
+cd /home/hduser/hadoop
+hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 2 5
+```
 
 
 
