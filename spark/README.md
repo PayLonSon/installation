@@ -72,6 +72,7 @@ scp -r spark node2:/home/hduser
 ```
 cd spark
 sbin/start-all.sh
+./build/env/bin/hue livy_server
 ```
 
 測試範例`bin/run-example org.apache.spark.examples.SparkPi 100`
