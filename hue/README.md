@@ -28,11 +28,47 @@ git clone https://github.com/cloudera/hue.git
 cd hue
 make apps
 build/env/bin/hue runserver
-
 ```
+
+`cd ~`
+
+修改Hadoop配置，`vim hadoop/etc/hadoop/hdfs-site.xml`，增加以下
+```
+<property>
+  <name>dfs.webhdfs.enabled</name>
+  <value>true</value>
+</property>
+```
+
+修改Hadoop配置，`vim hadoop/etc/hadoop/cofe-site.xml`，增加以下
+```
+<property>
+  <name>hadoop.proxyuser.hue.hosts</name>
+  <value>*</value>
+</property>
+<property>
+  <name>hadoop.proxyuser.hue.groups</name>
+  <value>*</value>
+</property>
+```
+
+修改Hive配置，`vim hive/conf/hive-site.xml`，搜尋並修改
+```
+<property>
+    <name>hive.server2.authentication</name>
+    <value>NOSASL</value>
+  </property>
+```
+
 
 接下來進行Hue文件配置
 ```
 vim desktop/conf/pseudo-distributed.ini
 ```
 
+須修改的內容如下:(用搜尋修改)
+```
+配置項目                  值            說明
+server_user               hduser
+server_group              hadoop
+default_hdfs_superuser    hadoop        HDFS管理用戶
