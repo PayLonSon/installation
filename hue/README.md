@@ -85,3 +85,10 @@ hive_server_port          10000                             port
 hive_conf_dir             /home/hduser/hive/conf            Hive家目錄
 ```
 
+新增Hue使用者
+```
+sudo adduser hadoop hue
+sudo adduser hue sudo
+```
+
+接下來開起網頁`http://master_ip:8000`，查看還有什麼問題，再去修改hue設定檔
