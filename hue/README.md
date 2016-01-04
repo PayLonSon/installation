@@ -8,11 +8,7 @@ HBase-1.0.0-cdh5.4.5
 Hive-1.2.1
 ```
 
-進到`Hive資料夾`開啟`hiveserver2`
 
-```
-bin/hiveserver2 &
-```
 
 安裝相關軟體
 
@@ -90,5 +86,18 @@ hive_conf_dir             /home/hduser/hive/conf            Hive家目錄
 sudo adduser hadoop hue
 sudo adduser hue sudo
 ```
+
+啟動所有服務，如果啟動過就不用再次啟動
+
+Hadoop，`sbin/start-all.sh`
+Zookeeper，`bin/zkServer.sh start`
+HBase，`bin/start-hbase.sh`
+Hive
+```
+hive --service metastore &
+bin/hiveserver2 &
+```
+
+啟動Hue`build/env/bin/hue runserver 0.0.0.0:8000`
 
 接下來開起網頁`http://master_ip:8000`，查看還有什麼問題，再去修改hue設定檔
