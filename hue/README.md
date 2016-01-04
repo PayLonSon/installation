@@ -8,7 +8,7 @@ HBase-1.0.0-cdh5.4.5
 Hive-1.2.1
 ```
 
-進到`Hive`開啟`hiveserver2`
+進到`Hive資料夾`開啟`hiveserver2`
 
 ```
 bin/hiveserver2 &
@@ -68,7 +68,20 @@ vim desktop/conf/pseudo-distributed.ini
 
 須修改的內容如下:(用搜尋修改)
 ```
-配置項目                  值            說明
-server_user               hduser
-server_group              hadoop
-default_hdfs_superuser    hadoop        HDFS管理用戶
+配置項目                  值                                說明
+http_host                 master_ip                         如果hue放在整個叢集的主機上，這個值不用更改
+http_port                 8000                              port
+server_user               hduser                            執行Hue Web Server的使用者
+server_group              hadoop                            執行Hue Web Server的群組
+default_hdfs_superuser    hadoop                            HDFS管理用戶
+default_user              hduser                            Hue的管理者
+fs_defaultfs              hdfs://master:8020                要跟hadoop的core-sit.xml配置一樣
+hadoop_conf_dir           /home/hduser/hadoop/etc/hadoop/   hadoop家目錄
+resourcemanager_host      master                            對應到hadoop的yarn-site.xml
+resourcemanager_api_url   http://master:8088                對應到hadoop的yarn-site.xml
+
+hive_server_host          master                            hive所在主機ip
+hive_server_port          10000                             port
+hive_conf_dir             /home/hduser/hive/conf            Hive家目錄
+```
+
