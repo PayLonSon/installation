@@ -197,5 +197,27 @@ cd /home/hduser/hadoop
 hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 2 5
 ```
 
+```
+hadoop fs -ls /
+hadoop fs -mkdir -p /hduser/test
+```
+將檔案放上HDFS
+```
+hadoop fs -put LICENSE.txt /hduser/test/
+```
+查看檔案是否放上去
+```
+hadoop fs -ls /hduser/test
+```
+執行wordcount
+```
+hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar wordcount /hduser/test/LICENSE.txt /hduser/test/output1/
+```
+查看結果
+```
+hadoop fs -ls /hduser/test/output1   (必須看到_SUCCESS)
+hadoop fs -cat /hduser/test/output1/part-r-00000
+```
+
 
 
