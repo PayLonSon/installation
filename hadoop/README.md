@@ -19,7 +19,7 @@ sudo service hostname start
  安裝Java JDK
  
  ```
- sudo apt-get -y openjdk-7-jdk
+ sudo apt-get install -y openjdk-7-jdk
  sudo ln -s /usr/lib/jvm/java-7-openjdk-amd64 /usr/lib/jvm/jdk
  ```
 
