@@ -17,7 +17,7 @@ mv zookeeper-3.4.5-cdh5.4.5 zookeeper
 ```
 複製config檔
 ```
-cp /opt/hadoop/zookeeper/conf/zoo_sample.cfg /opt/hadoop/zookeeper/conf/zoo.cfg
+cp /home/hduser/zookeeper/conf/zoo_sample.cfg /home/hduser/zookeeper/conf/zoo.cfg
 ```
 
 修改`zookeeper/conf/zoo.cfg`，`vim zookeeper/conf/zoo.cfg`，修改為你要放myid檔案的路徑
