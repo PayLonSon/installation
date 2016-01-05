@@ -12,9 +12,10 @@ hbase-1.0.0-cdh5.4.5
 
 這裡我們不使用HBase內建zookeeper，如沒安裝zookeeper請先安裝
 
-先將檔案放進機器
+先將檔案放進機器或下載
 ```
 cd ~
+wget http://archive.cloudera.com/cdh5/cdh/5/hbase-1.0.0-cdh5.4.5.tar.gz
 tar -zxvf hbase-1.0.0-cdh5.4.5.tar.gz
 mv hbase-1.0.0-cdh5.4.5 hbase
 ```
