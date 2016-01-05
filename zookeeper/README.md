@@ -9,8 +9,9 @@ hadoop-2.7.1
 zookeeper-3.4.5-cdh5.4.5
 ```
 
-將`zookeeper-3.4.5-cdh5.4.5.tar.gz`放到機器裡面
+將`zookeeper-3.4.5-cdh5.4.5.tar.gz`放到機器裡面或下載
 ```
+wget http://archive.cloudera.com/cdh5/cdh/5/zookeeper-3.4.5-cdh5.4.5.tar.gz
 tar -zxvf zookeeper-3.4.5-cdh5.4.5.tar.gz
 mv zookeeper-3.4.5-cdh5.4.5 zookeeper
 ```
