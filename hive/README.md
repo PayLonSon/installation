@@ -47,7 +47,7 @@ hadoop fs -chnow 777 /user/hive/warehouse
 
 接著啟動MySQL，建立一個專屬Hive的帳號，啟動方式如下:
 
-`mysql u root -p`
+`mysql -u root -p`
 
 接著會要你輸入root密碼，輸入完後會進到`mysql>`的command模式，複製指令時不要複製到`mysql>`以及註解
 ```
