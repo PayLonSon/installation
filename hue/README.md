@@ -39,11 +39,11 @@ build/env/bin/hue runserver
 修改Hadoop配置，`vim hadoop/etc/hadoop/core-site.xml`，增加以下
 ```
 <property>
-  <name>hadoop.proxyuser.hue.hosts</name>
+  <name>hadoop.proxyuser.hduser.hosts</name>
   <value>*</value>
 </property>
 <property>
-  <name>hadoop.proxyuser.hue.groups</name>
+  <name>hadoop.proxyuser.hduser.groups</name>
   <value>*</value>
 </property>
 ```
