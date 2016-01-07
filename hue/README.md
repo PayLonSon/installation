@@ -69,7 +69,7 @@ http_host                 master_ip                         如果hue放在整�
 http_port                 8000                              port
 server_user               hduser                            執行Hue Web Server的使用者
 server_group              hadoop                            執行Hue Web Server的群組
-default_hdfs_superuser    hadoop                            HDFS管理用戶
+default_hdfs_superuser    hduser                            HDFS管理用戶
 default_user              hduser                            Hue的管理者
 fs_defaultfs              hdfs://master:8020                要跟hadoop的core-sit.xml配置一樣
 hadoop_conf_dir           /home/hduser/hadoop/etc/hadoop/   hadoop家目錄
