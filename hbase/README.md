@@ -135,6 +135,8 @@ scp -r hbase node2:/home/hduser
 ```
 cd hbase
 bin/start-hbase.sh
+hbase thrift start &
+
 ```
 使用`jps`查看，master必須有以下兩個服務
 ```
