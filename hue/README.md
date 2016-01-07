@@ -91,7 +91,7 @@ sudo adduser hue sudo
 
 Hadoop，`sbin/start-all.sh`
 Zookeeper，`bin/zkServer.sh start`
-HBase，`bin/start-hbase.sh`
+HBase，`bin/start-hbase.sh`，`hbase thrift start &`
 Hive
 ```
 hive --service metastore &
