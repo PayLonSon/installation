@@ -36,7 +36,7 @@ build/env/bin/hue runserver
 </property>
 ```
 
-修改Hadoop配置，`vim hadoop/etc/hadoop/cofe-site.xml`，增加以下
+修改Hadoop配置，`vim hadoop/etc/hadoop/core-site.xml`，增加以下
 ```
 <property>
   <name>hadoop.proxyuser.hue.hosts</name>
